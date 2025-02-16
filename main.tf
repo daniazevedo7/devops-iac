@@ -24,6 +24,6 @@ resource "aws_instance" "app_server" {
   nohup busybox httpd -f -p 8008 &
   EOF     */
   tags = {
-    Name = "teste-aws"
+    Name = "terraform_ansible"
   }
 }
