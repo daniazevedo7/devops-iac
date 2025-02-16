@@ -6,4 +6,10 @@
       - python3
       - virtualenv
       update_cache: yes
-  become: yes
+    become: yes
+  - name: Instalando dependências com pip(Django e Django Rest)
+    pip:
+      virtualenv: /home/ubuntu/devops-iac/venv
+      name:
+        - django 
+        - djangorestframework
