@@ -13,3 +13,12 @@
       name:
         - django 
         - djangorestframework
+  - name: Iniciando o projeto Django
+    shell: '. /home/ubuntu/devops-iac/venv/bin/activate; django-admin startproject setup /home/ubuntu/devops-iac/'
+  - name: Alterando o hosts do settings 
+    lineinfile:
+      path: '/home/ubuntu/devops-iac/setup/settings.py'
+      regex: 'ALLOWED_HOSTS'
+      line: 'ALLOWED_HOSTS = ["*"]'
+      backrefs: yes
+
