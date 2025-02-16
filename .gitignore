@@ -9,3 +9,6 @@
 
 #SSH
 *.pem
+
+#VScode
+**/.vscode/*
